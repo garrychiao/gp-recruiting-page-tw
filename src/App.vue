@@ -1,17 +1,31 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <router-view></router-view>
+    <el-row :gutter="15">
+      <el-col :sm="18" :offset="3">
+        <Navbar></Navbar>
+      </el-col>
+      <el-col :sm="4" :offset="3">
+        <Sidebar></Sidebar>
+      </el-col>
+      <el-col :sm="14">
+        <MainContent></MainContent>
+      </el-col>
+    </el-row>
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainContent from './views/MainContent.vue'
+import Navbar from './views/Navbar.vue'
+import Sidebar from './views/Sidebar.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    MainContent,
+    Sidebar,
+    Navbar,
   }
 }
 </script>

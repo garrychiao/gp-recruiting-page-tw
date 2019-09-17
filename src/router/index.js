@@ -1,21 +1,15 @@
 import Vue from 'vue';
-import Home from '../views/Home.vue';
-import Admin from '../views/Admin.vue';
+import MainContent from '../views/MainContent.vue';
 import Router from 'vue-router'
 
 Vue.use(Router);
 
 const router = new Router({
     routes: [{
-            path: '/',
-            name: 'home',
-            component: Home,
-        },
-        {
-            path: '/admin',
-            name: 'admin',
-            component: Admin
-        },
+            path: '/:section',
+            name: 'MainContent',
+            component: MainContent,
+        }
     ],
 });
 
