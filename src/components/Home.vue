@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <el-row type="flex" justify="space-around">
-      <el-col :sm="{span: 6, offset: 0}" class="center-align">
+    <el-row>
+      <el-col :xs="{span: 24, offset: 0}" :sm="{span: 11, offset: 0}" class="center-align hidden-xs-only">
         <h1>綠色和平<br>以實際行動<br>推動積極改變</h1>
       </el-col>
-      <el-col :sm="{span: 12, offset: 0}" class="center-align">
+      <el-col :xs="{span: 24, offset: 0}" :sm="{span: 12, offset: 0}" class="center-align">
         <el-carousel :interval="5000">
           <el-carousel-item 
             class="center-align"
@@ -14,9 +14,14 @@
           </el-carousel-item>
         </el-carousel>
       </el-col>
+      <el-col :xs="{span: 24, offset: 0}" :sm="{span: 24, offset: 0}" class="center-align hidden-sm-and-up">
+        <h1>綠色和平 以實際行動<br>推動積極改變</h1>
+        <el-divider></el-divider>
+      </el-col>
     </el-row>
     <el-row>
       <el-col :span="22" :offset="1">
+        <el-divider class="hidden-xs-only"></el-divider>
         <h2>每2秒，全球就有1個標準足球場大小的原始森林消失</h2>
         <h2>每1分鐘，全球就有相等於1輛垃圾車容量的塑膠廢物傾倒海洋</h2>
         <h2>每8位全球死亡人口，就有1位的死因與空氣污染相關</h2>
@@ -52,7 +57,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 .center-align {
   text-align: center;
 }

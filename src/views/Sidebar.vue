@@ -2,7 +2,7 @@
   <div class="sidebar">
     <el-menu
       text-color="#000000"
-      active-text-color="#006837"
+      active-text-color="#fff"
       :default-active="active"
       class="el-menu">
       <el-menu-item 
@@ -10,7 +10,10 @@
         :key="i"
         :index="(i + 1).toString()"
         @click="directTo(item.link)">
-        <span>{{ item.label }}</span>
+        <span>
+          <i :class="item.icon"></i>
+          {{ item.label }}
+        </span>
       </el-menu-item>
     </el-menu>
   </div>
@@ -24,26 +27,32 @@ export default {
       active: '1',
       routers: [
         {
+          icon: "el-icon-s-home",
           link: 'home',
           label: '首頁'
         },
         {
+          icon: "el-icon-aim",
           link: 'mission',
           label: '綠色和平的使命'
         },
         {
+          icon: "el-icon-user-solid",
           link: 'recruit',
           label: '人才招聘'
         },
         {
+          icon: "el-icon-postcard",
           link: 'personnel',
           label: '人事制度'
         },
         {
+          icon: "el-icon-s-check",
           link: 'fundraiser',
           label: '認識籌款幹事'
         },
         {
+          icon: "el-icon-info",
           link: 'recruitInfo',
           label: '人才招聘訊息'
         }
@@ -66,7 +75,7 @@ export default {
           this.active = index;
         }
       }
-      console.log(this.active)
+      // console.log(this.active)
     }
   },
   watch: { 
@@ -88,6 +97,6 @@ export default {
   background-color: #409EFF;
 }
 .sidebar {
-  text-align: right;
+  /* text-align: right; */
 }
 </style>

@@ -1,11 +1,11 @@
 <template>
   <div class="recruit-info">
     <el-row>
-      <el-col :sm="{span: 22, offset: 1}">
+      <el-col :xs="{span: 22, offset: 1}" :sm="{span: 22, offset: 1}">
         <h1>人才招聘資訊</h1>
         <p>有意應徵者，歡迎將履歷電郵至 david.lau@greenpeace.org 或 whatsapp 54603080 劉先生了解詳情。<br>(應徵者提供之全部資料絕對保密及只作招聘之用)</p>
       </el-col>
-      <el-col :sm="{span: 22, offset: 1}">
+      <el-col :xs="{span: 22, offset: 1}" :sm="{span: 22, offset: 1}">
         <img src="https://secured.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/recruit_mv.jpg" width="100%" alt="">
       </el-col>
     </el-row>
@@ -71,6 +71,11 @@ export default {
 @media (min-width: 992px) and (max-width: 1919px) {
   .video {
     height: 430px;
+  } 
+}
+@media (max-width: 991px) {
+  .video {
+    height: 280px;
   } 
 }
 </style>

@@ -1,12 +1,13 @@
 <template>
   <div class="personnel">
     <el-row type="flex">
-      <el-col :sm="{span: 8, offset: 0}">
+      <el-col :xs="{span: 22, offset: 1}" :sm="{span: 22, offset: 1}">
         <h1>人事制度</h1>
         <p>我們將嚴謹注視每名員工的能力和工作表現，以加薪和晉升來獎勵每名員工的努力。</p>
+        <el-divider></el-divider>
       </el-col>
     </el-row>
-    <el-divider></el-divider>
+    
     <el-row class="graph-content">
       <el-col :span="22" :offset="1">
         <el-card shadow="always">

@@ -11,11 +11,11 @@
         <el-divider></el-divider>
         <div v-for="(item, index) in cardData" :key="index" class="card-data">
           <el-card :body-style="cardStyle" shadow="hover">
-            <el-row type="flex">
-              <el-col :span="8">
-                <img :src="item.img" alt="" height="100%">
+            <el-row>
+              <el-col :xs="{span: 24, offset: 0}" :sm="{span: 9, offset: 0}" :xl="{span: 8, offset: 0}" class="hide-overflow">
+                <img :src="item.img" alt="" width="100%">
               </el-col>
-              <el-col :span="16">
+              <el-col :xs="{span: 22, offset: 1}" :sm="{span: 14, offset: 1}" :xl="{span: 15, offset: 1}">
                 <h2>{{item.title}}</h2>
                 <p>{{ item.content }}</p>
               </el-col>
@@ -72,5 +72,8 @@ export default {
 <style scoped>
 .card-data {
   margin-bottom: 20px;
+}
+.hide-overflow {
+  overflow: hidden;
 }
 </style>

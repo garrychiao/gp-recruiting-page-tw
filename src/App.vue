@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <el-row :gutter="15">
-      <el-col :xs="24" :sm="24" :md="{span: 18, offset: 3}">
+      <el-col :xs="24" :sm="24" :md="{span: 19, offset: 3}" :xl="{span: 18, offset: 3}">
         <Navbar></Navbar>
       </el-col>
-      <el-col :md="4" :offset="3" class="hidden-sm-and-down">
+      <el-col :md="4" :xl="3" :offset="3" class="hidden-sm-and-down">
         <Sidebar></Sidebar>
       </el-col>
-      <el-col :md="12">
+      <el-col :xs="24" :sm="24" :md="14" :xl="12">
         <MainContent></MainContent>
       </el-col>
     </el-row>
@@ -35,5 +35,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-top: -7.5px;
 }
+
 </style>

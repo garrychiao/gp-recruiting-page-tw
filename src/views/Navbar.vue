@@ -1,54 +1,34 @@
 <template>
   <div class="navbar">
     <el-row type="flex" justify="space-between">
-      <el-col :span="18">
+      <el-col :xs="{span: 17, offset: 1}" :sm="{span: 17, offset: 1}" :md="{span: 18, offset: 0}" >
         <img src="@/assets/img/gp_logo.jpg" alt="GP LOGO" class="navbar-logo">
       </el-col>
       <el-col :span="4">
-        <el-button size="small" icon="el-icon-more" plain @click="drawer = !drawer"></el-button>
+        <el-button size="small" icon="el-icon-more" plain @click="drawer = !drawer" class="hidden-md-and-up"></el-button>
       </el-col>
     </el-row>
     <el-drawer
       :visible.sync="drawer"
       custom-class="drawer"
-      size="50%"
-      direction="ttb">
+      size="auto"
+      direction="ltr">
       <el-menu
-        default-active="2"
-        class="el-menu-vertical-demo"
-        background-color="#545c64"
-        text-color="#fff"
-        active-text-color="#ffd04b">
-        <el-submenu index="1">
-          <template slot="title">
-            <i class="el-icon-location"></i>
-            <span>Navigator One</span>
-          </template>
-          <el-menu-item-group title="Group One">
-            <el-menu-item index="1-1">item one</el-menu-item>
-            <el-menu-item index="1-2">item one</el-menu-item>
-          </el-menu-item-group>
-          <el-menu-item-group title="Group Two">
-            <el-menu-item index="1-3">item three</el-menu-item>
-          </el-menu-item-group>
-          <el-submenu index="1-4">
-            <template slot="title">item four</template>
-            <el-menu-item index="1-4-1">item one</el-menu-item>
-          </el-submenu>
-        </el-submenu>
-        <el-menu-item index="2">
-          <i class="el-icon-menu"></i>
-          <span>Navigator Two</span>
-        </el-menu-item>
-        <el-menu-item index="3" disabled>
-          <i class="el-icon-document"></i>
-          <span>Navigator Three</span>
-        </el-menu-item>
-        <el-menu-item index="4">
-          <i class="el-icon-setting"></i>
-          <span>Navigator Four</span>
-        </el-menu-item>
-      </el-menu>
+      text-color="#000000"
+      active-text-color="#fff"
+      :default-active="active"
+      class="el-menu">
+      <el-menu-item 
+        v-for="(item, i) in routers" 
+        :key="i"
+        :index="(i + 1).toString()"
+        @click="directTo(item.link)">
+        <span>
+          <i :class="item.icon"></i>
+          {{ item.label }}
+        </span>
+      </el-menu-item>
+    </el-menu>
     </el-drawer>
   </div>
 </template>
@@ -58,29 +38,36 @@ export default {
   name: 'Navbar',
   data() {
     return {
-      drawer: true,
+      active: '1',
+      drawer: false,
       routers: [
         {
+          icon: "el-icon-s-home",
           link: 'home',
           label: '首頁'
         },
         {
+          icon: "el-icon-aim",
           link: 'mission',
           label: '綠色和平的使命'
         },
         {
+          icon: "el-icon-user-solid",
           link: 'recruit',
           label: '人才招聘'
         },
         {
+          icon: "el-icon-postcard",
           link: 'personnel',
           label: '人事制度'
         },
         {
+          icon: "el-icon-s-check",
           link: 'fundraiser',
           label: '認識籌款幹事'
         },
         {
+          icon: "el-icon-info",
           link: 'recruitInfo',
           label: '人才招聘訊息'
         }
@@ -95,6 +82,7 @@ export default {
       if (link !== this.$route.params.section) {
         this.$router.push({ path: link });
       }
+      this.drawer = false;
     },
     bindSection() {
       for (let i in this.routers) {
@@ -114,13 +102,18 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 .navbar {
-  height: 50px;
-  padding: 20px 0;
+  height: auto;
+  padding: 10px 0;
+  .el-button {
+    margin-top: -5px;
+  }
 }
 .navbar-logo {
   max-width: 200px;
 }
-
+.el-menu {
+  background-color: #f9f9f9;
+}
 </style>

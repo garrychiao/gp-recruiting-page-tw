@@ -1,19 +1,19 @@
 <template>
   <div class="recruit">
-    <el-row type="flex" justify="space-around">
-      <el-col :sm="{span: 8, offset: 0}" class="center-align">
+    <el-row>
+      <el-col :xs="{span: 22, offset: 1}" :sm="{span: 10, offset: 1}" class="center-align">
         <h1>人才招聘</h1>
         <h3>誠聘綠色和平籌款幹事</h3>
         <p>當我們多方努力守護環境的同時，更重要的是讓更多人知道並關注環保議題，才能持續壯大尋求改變的陣營，從而締造綠色成果。籌款幹事站在推動環境保護最前線，面對拒絕與冷漠，以堅持與熱誠傳播環保訊息，凝聚群眾力量。</p>
         <p>您願意成為我們其中一員嗎？</p>
       </el-col>
-      <el-col :sm="{span: 12, offset: 0}" class="center-align">
+      <el-col :xs="{span: 22, offset: 1}" :sm="{span: 12, offset: 0}" class="center-align">
         <img src="https://secured-static.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/index_mv6.jpg" width="100%" alt="">
       </el-col>
     </el-row>
-    <el-divider></el-divider>
     <el-row class="table-data">
       <el-col :span="22" :offset="1">
+      <el-divider></el-divider>
       <el-card shadow="always">
         <h2>招聘詳情</h2>
         <h3>綠色和平籌款幹事</h3>
@@ -81,6 +81,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.recruit {
+  img {
+    margin-top: 20px;
+  }
+}
 .table-data {
   text-align: center;
   .el-row {
