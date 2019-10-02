@@ -78,13 +78,17 @@ export default {
     async submitForm(formName) {
       this.$refs[formName].validate(async (valid) => {
         if (valid) {
+
+          var d = new Date(this.applyForm.birthYear);
+          let year = d.getFullYear();
       
           let data = new FormData();
           data.append('Chi_Name', this.applyForm.name);
           data.append('Gender', this.applyForm.gender);
           data.append('Phone', this.applyForm.phone);
           data.append('Email', this.applyForm.email);
-          data.append('Year_Of_Birth', this.applyForm.birthYear);
+          data.append('Year_Of_Birth', year);
+          data.append('Source', window.location.search);
 
           let postRef = await axios.post(config.script, data);
 
@@ -94,9 +98,8 @@ export default {
           
         } else {
 
-          let urlParams = new URLSearchParams(window.location.search);
-          console.log(urlParams);
-          console.log(urlParams.toString());
+          console.log(window.location.search);
+          
           console.log('error submit!!');
           return false;
         }
