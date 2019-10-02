@@ -19,6 +19,7 @@ import Recruit from '../components/Recruit';
 import Personnel from '../components/Personnel';
 import Fundraiser from '../components/Fundraiser';
 import RecruitInfo from '../components/RecruitInfo';
+import ApplyForm from '../components/ApplyForm';
 
 export default {
   name: 'MainContent',
@@ -29,6 +30,7 @@ export default {
     Personnel,
     Fundraiser,
     RecruitInfo,
+    ApplyForm,
   },
   data() {
     return {
@@ -57,6 +59,10 @@ export default {
         {
           route: 'recruitInfo',
           component: RecruitInfo,
+        },
+        {
+          route: 'applyForm',
+          component: ApplyForm,
         },
       ]
     }

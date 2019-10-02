@@ -12,8 +12,7 @@
       <el-col :span="22" :offset="1">
         <el-card shadow="always">
           <h2>晉升機會</h2>
-          <img src="https://secured.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/personnel.jpg" width="100%" alt="">
-            
+          <img src="https://secured.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/personnel.jpg" width="100%" alt="">      
         </el-card>
       </el-col>
     </el-row>
