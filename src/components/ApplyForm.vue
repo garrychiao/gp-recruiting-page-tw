@@ -29,11 +29,11 @@
               <el-input v-model="applyForm.email" placeholder="電郵地址"></el-input>
             </el-form-item>
             <el-form-item label="出生年份" prop="birthYear">
-              <el-date-picker type="year" placeholder="Pick a year" v-model="applyForm.birthYear" style="width: 100%;"></el-date-picker>
+              <el-date-picker type="year" placeholder="出生年份" v-model="applyForm.birthYear" style="width: 100%;"></el-date-picker>
             </el-form-item>
             
             <el-form-item>
-              <el-button type="success" @click="submitForm('applyForm')">提交申請</el-button>
+              <el-button type="success" :loading="submitLoading" @click="submitForm('applyForm')">提交申請</el-button>
             </el-form-item>
           </el-form>
         </el-card>
@@ -43,14 +43,15 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2';
 const axios = require('axios');
 const config = require('../config/config');
-
 
 export default {
   name: 'applyForm',
   data() {
     return {
+      submitLoading: false,
       applyForm: {
         name: '',
         phone: '',
@@ -60,16 +61,16 @@ export default {
       },
       rules: {
         name: [
-          { required: true, message: 'Please input Activity name', trigger: 'blur' },
+          { required: true, message: '請輸入中文全名', trigger: 'blur' },
         ],
         phone: [
-          { required: true, message: 'Please select Activity zone', trigger: 'blur' }
+          { required: true, message: '請輸入聯絡電話', trigger: 'blur' }
         ],
         email: [
-          { type: 'email', required: true, message: 'Please pick a time', trigger: 'blur' }
+          { type: 'email', required: true, message: '請輸入電郵地址', trigger: 'blur' }
         ],
         birthday: [
-          { type: 'date', required: true, message: 'Please select at least one activity type', trigger: 'blur' }
+          { type: 'date', required: true, message: '請輸入出生年份', trigger: 'blur' }
         ],
       }
     };
@@ -79,6 +80,7 @@ export default {
       this.$refs[formName].validate(async (valid) => {
         if (valid) {
 
+          this.submitLoading = true
           var d = new Date(this.applyForm.birthYear);
           let year = d.getFullYear();
       
@@ -90,18 +92,30 @@ export default {
           data.append('Year_Of_Birth', year);
           data.append('Source', window.location.search);
 
-          let postRef = await axios.post(config.script, data);
+          try {
+            let postRef = await axios.post(config.script, data);
 
-          let res = postRef.data;
+            let res = postRef.data;
 
-          console.log(res);
+            if (res.result === 'success') {
+              Swal.fire(
+                '申請已提交',
+                '綠色和平將於５個工作天內聯絡你。',
+                'success'
+              )
+              this.submitLoading = false;
+            } else {
+              this.submitLoading = false
+              console.log(res);
+            }
+
+          } catch (err) {
+            this.submitLoading = false
+            console.log(err);
+          }
           
         } else {
-
-          console.log(window.location.search);
-          
           console.log('error submit!!');
-          return false;
         }
       });
     },
