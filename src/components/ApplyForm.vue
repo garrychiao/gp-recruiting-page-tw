@@ -69,7 +69,7 @@ export default {
         email: [
           { type: 'email', required: true, message: '請輸入電郵地址', trigger: 'blur' }
         ],
-        birthday: [
+        birthYear: [
           { type: 'date', required: true, message: '請輸入出生年份', trigger: 'blur' }
         ],
       }
