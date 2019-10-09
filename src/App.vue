@@ -32,7 +32,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family:	'Noto Sans TC', "PingFang HK","Helvetica Neue","Helvetica","Arial",sans-serif,'Segoe UI','Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-top: -7.5px;
