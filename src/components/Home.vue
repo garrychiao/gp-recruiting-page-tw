@@ -1,30 +1,37 @@
 <template>
   <div class="home">
     <el-row>
-      <el-col :xs="{span: 24, offset: 0}" :sm="{span: 11, offset: 0}" class="center-align hidden-xs-only">
-        <h1>綠色和平<br>以實際行動<br>推動積極改變</h1>
+      <el-col :xs="{span: 24, offset: 0}" :sm="{span: 11, offset: 0}" class="hidden-xs-only">
+        <div>
+          <h1>誠聘綠色和平籌款幹事</h1>
+          <h2>綠色和平以實際行動推動積極改變</h2>
+        </div>
       </el-col>
-      <el-col :xs="{span: 24, offset: 0}" :sm="{span: 12, offset: 0}" class="center-align">
+      <el-col :xs="{span: 24, offset: 0}" :sm="{span: 12, offset: 0}">
         <el-carousel :interval="5000">
-          <el-carousel-item 
+          <el-carousel-item
             class="center-align"
-            v-for="(item, index) in carouselItems" 
-            :key="index">
-            <img :src="item.imgUrl" height="100%" alt="">
+            v-for="(item, index) in carouselItems"
+            :key="index"
+          >
+            <img :src="item.imgUrl" height="100%" alt />
           </el-carousel-item>
         </el-carousel>
       </el-col>
-      <el-col :xs="{span: 24, offset: 0}" :sm="{span: 24, offset: 0}" class="center-align hidden-sm-and-up">
-        <h1>綠色和平 以實際行動<br>推動積極改變</h1>
+      <el-col
+        :xs="{span: 24, offset: 0}"
+        :sm="{span: 24, offset: 0}"
+        class="center-align hidden-sm-and-up"
+      >
+        <h1>誠聘綠色和平籌款幹事</h1>
+        <h2>綠色和平以實際行動推動積極改變</h2>
         <el-divider></el-divider>
       </el-col>
     </el-row>
     <el-row>
       <el-col :span="22" :offset="1">
         <el-divider class="hidden-xs-only"></el-divider>
-        <h2>每2秒，全球就有1個標準足球場大小的原始森林消失</h2>
-        <h2>每1分鐘，全球就有相等於1輛垃圾車容量的塑膠廢物傾倒海洋</h2>
-        <h2>每8位全球死亡人口，就有1位的死因與空氣污染相關</h2>
+        <p>街頭籌款團隊往往站在環境保護的最前線，面對大眾，以堅持與熱誠傳播環保訊息，尋找支持的力量。你願意成為我們其中一員嗎？</p>
         <p>加入綠色和平，為應對氣候變化、塑膠災難、空氣污染獻出你的一分力量。</p>
         <p>脆弱的地球需要你我去守護，作為綠色和平的一員，你將有機會直接參與重要的環保項目。不論年齡或性別，綠色和平只著重員工的能力和成長，更承諾提供晉升機會和完善薪酬制度，讓員工發揮所長，為環境帶來更多改變，開拓新里程。</p>
       </el-col>
@@ -34,26 +41,30 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: "Home",
   data() {
     return {
       carouselItems: [
         {
-          imgUrl: 'https://secured-static.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/index_mv1.jpg'
+          imgUrl:
+            "https://secured-static.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/index_mv1.jpg"
         },
         {
-          imgUrl: 'https://secured.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/index_mv2_new.jpg'
+          imgUrl:
+            "https://secured.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/index_mv2_new.jpg"
         },
         {
-          imgUrl: 'https://secured.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/index_mv3_new.jpg'
+          imgUrl:
+            "https://secured.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/index_mv3_new.jpg"
         },
         {
-          imgUrl: 'https://secured-static.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/index_mv4.jpg'
-        },
-      ],
-    }
+          imgUrl:
+            "https://secured-static.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/index_mv4.jpg"
+        }
+      ]
+    };
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -61,5 +72,4 @@ export default {
 .center-align {
   text-align: center;
 }
-
 </style>

@@ -1,41 +1,57 @@
 <template>
-  <div id="app">
-    <el-row :gutter="15">
-      <el-col :xs="24" :sm="24" :md="{span: 19, offset: 3}" :xl="{span: 18, offset: 3}">
+  <main id="app">
+    <el-container>
+      <el-header class="header">
         <Navbar></Navbar>
-      </el-col>
-      <el-col :md="4" :xl="3" :offset="3" class="hidden-sm-and-down">
-        <Sidebar></Sidebar>
-      </el-col>
-      <el-col :xs="24" :sm="24" :md="14" :xl="12">
-        <MainContent></MainContent>
-      </el-col>
-    </el-row>
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  </div>
+      </el-header>
+      <!-- header -->
+      <el-main>
+        <el-row :gutter="15">
+          <el-col :md="4" :xl="3" :offset="3" class="hidden-sm-and-down">
+            <Sidebar></Sidebar>
+          </el-col>
+          <el-col :xs="24" :sm="24" :md="14" :xl="12">
+            <MainContent></MainContent>
+          </el-col>
+        </el-row>
+      </el-main>
+      <!-- main -->
+      <el-footer>Footer</el-footer>
+      <!-- footer -->
+    </el-container>
+  </main>
 </template>
 
 <script>
-import MainContent from './views/MainContent.vue'
-import Navbar from './views/Navbar.vue'
-import Sidebar from './views/Sidebar.vue'
+import MainContent from "./views/MainContent.vue";
+import Navbar from "./views/Navbar.vue";
+import Sidebar from "./views/Sidebar.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     MainContent,
     Sidebar,
-    Navbar,
+    Navbar
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family:	'Noto Sans TC', "PingFang HK","Helvetica Neue","Helvetica","Arial",sans-serif,'Segoe UI','Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin-top: -7.5px;
+<style lang="scss">
+.el-container {
+  min-height: 100vh;
 }
-
+.el-header {
+  background-color: #6c0;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
+  color: white;
+}
+.el-main {
+  flex: 1;
+}
+.el-footer {
+  padding-top: 60px;
+  background-color: #292f47;
+  color: white;
+}
 </style>
