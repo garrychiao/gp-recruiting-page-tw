@@ -16,8 +16,9 @@
         </el-row>
       </el-main>
       <!-- main -->
-      <el-footer>Footer</el-footer>
+      <app-footer></app-footer>
       <!-- footer -->
+      <el-button v-if="fixBtnVisible" type="danger" icon="el-icon-edit" class="hidden-md-and-up fix-btn" circle @click="directTo('applyForm')"></el-button>
     </el-container>
   </main>
 </template>
@@ -26,13 +27,44 @@
 import MainContent from "./views/MainContent.vue";
 import Navbar from "./views/Navbar.vue";
 import Sidebar from "./views/Sidebar.vue";
+import AppFooter from "./views/AppFooter.vue";
 
 export default {
   name: "app",
+  data() {
+    return {
+      fixBtnVisible: true,
+    }
+  },
   components: {
     MainContent,
     Sidebar,
-    Navbar
+    Navbar,
+    AppFooter,
+  },
+  created() {
+    if (this.$route.params.section == 'applyForm') {
+      this.fixBtnVisible = false
+    } else {
+      this.fixBtnVisible = true
+    }
+  },
+  methods: {
+    directTo(link) {
+      if (link !== this.$route.params.section) {
+        this.$router.push({ path: link });
+      } 
+      window.scrollTo(0, 0);
+    },
+  },
+  watch: {
+    "$route.params.section": function() {
+      if (this.$route.params.section == 'applyForm') {
+        this.fixBtnVisible = false
+      } else {
+        this.fixBtnVisible = true
+      }
+    }
   }
 };
 </script>
@@ -53,5 +85,11 @@ export default {
   padding-top: 60px;
   background-color: #292f47;
   color: white;
+}
+.fix-btn {
+  z-index: 1200;
+  position: fixed;
+  bottom: 110px;
+  right: 20px;
 }
 </style>

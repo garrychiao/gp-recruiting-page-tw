@@ -20,6 +20,17 @@ import '@/styles/scss/main.scss'
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 Vue.use(ElementUI)
+//
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFacebook, faTwitter, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faFacebook)
+library.add(faTwitter)
+library.add(faInstagram)
+library.add(faYoutube)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 new Vue({
   render: h => h(App),

@@ -1,12 +1,21 @@
 <template>
   <div class="navbar">
-    <el-row type="flex" justify="space-between" align="middle">
-      <el-col :xs="{span: 17, offset: 1}" :sm="{span: 17, offset: 1}" :md="{span: 18, offset: 0}">
+    <el-row type="flex" justify="space-between" align="middle" style="height: 60px;">
+      <el-col :xs="{span: 17, offset: 1}" :sm="{span: 17, offset: 3}" :xl="{span: 14, offset: 3}">
         <img
           src="@/assets/img/GP-logo-2019-TC-white-[web]-01.png"
           alt="Greenpeace 綠色和平"
           class="navbar-logo"
         />
+        <el-button 
+          type="danger" 
+          class="apply-btn-navbar hidden-sm-and-down" 
+          size="mini" 
+          round 
+          plain 
+          @click="directTo('applyForm')"> 
+          立即申請
+        </el-button>
       </el-col>
       <el-col :span="4">
         <el-button
@@ -147,6 +156,9 @@ export default {
     color: white !important;
     font-weight: bolder;
     background-color: #f56c6c;
+  }
+  .apply-btn-navbar {
+    float: right;
   }
 }
 </style>
