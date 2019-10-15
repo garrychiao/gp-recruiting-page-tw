@@ -1,19 +1,21 @@
 <template>
-  <main id="app">
+  <main id="app" class="main">
     <el-container>
       <el-header class="header">
         <Navbar></Navbar>
       </el-header>
       <!-- header -->
       <el-main>
-        <el-row :gutter="15">
-          <el-col :md="4" :xl="3" :offset="3" class="hidden-sm-and-down">
-            <Sidebar></Sidebar>
-          </el-col>
-          <el-col :xs="24" :sm="24" :md="14" :xl="12">
-            <MainContent></MainContent>
-          </el-col>
-        </el-row>
+        <el-container>
+          <el-row :gutter="20">
+            <el-col :md="6" :xl="4" class="hidden-sm-and-down">
+              <Sidebar></Sidebar>
+            </el-col>
+            <el-col :md="18" :xl="20">
+              <MainContent></MainContent>
+            </el-col>
+          </el-row>
+        </el-container>
       </el-main>
       <!-- main -->
       <el-footer class="footer" height="auto">
@@ -112,28 +114,34 @@ export default {
 </script>
 
 <style lang="scss">
-.el-container {
-  min-height: 100vh;
-}
-.el-header {
-  background-color: #6c0;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
-  color: white;
-}
-.el-main {
-  flex: 1;
-}
-.el-footer {
-  height: auto;
-  margin-top: 60px;
-  background-color: #292f47;
-  color: white;
-}
-.fix-btn {
-  z-index: 1200;
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  font-size: 2rem !important;
+.main {
+  > .el-container {
+    min-height: 100vh;
+  }
+  .el-header {
+    background-color: #6c0;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
+    color: white;
+  }
+  .el-main {
+    flex: 1;
+    .el-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+  .el-footer {
+    height: auto;
+    margin-top: 60px;
+    background-color: #292f47;
+    color: white;
+  }
+  .fix-btn {
+    z-index: 1200;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    font-size: 2rem !important;
+  }
 }
 </style>

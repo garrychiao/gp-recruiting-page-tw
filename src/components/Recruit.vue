@@ -1,14 +1,14 @@
 <template>
   <div class="recruit">
     <el-row>
-      <el-col>
+      <el-col :span="24">
         <h2>誠聘綠色和平籌款幹事</h2>
         <p>當我們多方努力守護環境的同時，更重要的是讓更多人知道並關注環保議題，才能持續壯大尋求改變的陣營，從而締造綠色成果。籌款幹事站在推動環境保護最前線，面對拒絕與冷漠，以堅持與熱誠傳播環保訊息，凝聚群眾力量。</p>
         <p>您願意成為我們其中一員嗎？</p>
       </el-col>
     </el-row>
     <el-row class="table-data">
-      <el-col>
+      <el-col :span="22" :offset="1">
         <el-divider></el-divider>
         <el-card>
           <h2>招聘詳情</h2>

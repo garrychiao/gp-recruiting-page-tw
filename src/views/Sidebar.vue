@@ -102,14 +102,15 @@ export default {
   .el-menu-item {
     display: flex;
     align-items: center;
+    font-size: 16px;
   }
   .apply-btn {
+    background-color: #f56c6c;
+    color: #fff;
+    font-weight: bold;
     i {
-      color: #67c23a !important;
+      color: #fff !important;
     }
-    color: #67c23a !important;
-    font-weight: bolder;
-    /* background-color: #67C23A; */
   }
   .apply-btn.is-active {
     i {

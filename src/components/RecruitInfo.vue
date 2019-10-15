@@ -1,6 +1,6 @@
 <template>
   <div class="recruit-info">
-    <el-row>
+    <el-row :span="24">
       <el-col>
         <h1>人才招聘資訊</h1>
         <p>
@@ -16,7 +16,7 @@
     </el-row>
     <el-divider></el-divider>
     <el-row class="graph-content">
-      <el-col :span="22" :offset="1">
+      <el-col :span="24">
         <h2>了解我們更多的工作使命，可觀看以下短片或瀏覧我們的網址</h2>
         <el-tabs type="border-card" :stretch="true">
           <el-tab-pane>

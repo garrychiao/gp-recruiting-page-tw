@@ -1,71 +1,67 @@
 <template>
   <div>
-    <el-row>
-      <el-col>
-        <transition name="fade" mode="out-in">
-          <keep-alive>
-            <component v-bind:is="section"></component>
-          </keep-alive>
-        </transition>
-      </el-col>
-    </el-row>
+    <transition name="fade" mode="out-in">
+      <keep-alive>
+        <component v-bind:is="section"></component>
+      </keep-alive>
+    </transition>
   </div>
 </template>
 
 <script>
-import Home from '../components/Home';
-import Mission from '../components/Mission';
-import Recruit from '../components/Recruit';
-import Personnel from '../components/Personnel';
-import Fundraiser from '../components/Fundraiser';
-import RecruitInfo from '../components/RecruitInfo';
-import ApplyForm from '../components/ApplyForm';
+import Home from "../components/Home";
+import Mission from "../components/Mission";
+import Recruit from "../components/Recruit";
+import Personnel from "../components/Personnel";
+import Fundraiser from "../components/Fundraiser";
+import RecruitInfo from "../components/RecruitInfo";
+import ApplyForm from "../components/ApplyForm";
 
 export default {
-  name: 'MainContent',
-  components:{
+  name: "MainContent",
+  components: {
     Home,
     Mission,
     Recruit,
     Personnel,
     Fundraiser,
     RecruitInfo,
-    ApplyForm,
+    ApplyForm
   },
   data() {
     return {
       section: Home,
       routerSection: [
         {
-          route: 'home',
-          component: Home,
+          route: "home",
+          component: Home
         },
         {
-          route: 'mission',
-          component: Mission,
+          route: "mission",
+          component: Mission
         },
         {
-          route: 'recruit',
-          component: Recruit,
+          route: "recruit",
+          component: Recruit
         },
         {
-          route: 'personnel',
-          component: Personnel,
+          route: "personnel",
+          component: Personnel
         },
         {
-          route: 'fundraiser',
-          component: Fundraiser,
+          route: "fundraiser",
+          component: Fundraiser
         },
         {
-          route: 'recruitInfo',
-          component: RecruitInfo,
+          route: "recruitInfo",
+          component: RecruitInfo
         },
         {
-          route: 'applyForm',
-          component: ApplyForm,
-        },
+          route: "applyForm",
+          component: ApplyForm
+        }
       ]
-    }
+    };
   },
   created() {
     this.bindSection();
@@ -73,7 +69,7 @@ export default {
   methods: {
     bindSection() {
       let section = this.routerSection.find(doc => {
-        return doc.route === this.$route.params.section
+        return doc.route === this.$route.params.section;
       });
       // console.log(section);
       if (section) {
@@ -81,18 +77,19 @@ export default {
       }
     }
   },
-  watch: { 
-    '$route.params.section': function() {
+  watch: {
+    "$route.params.section": function() {
       this.bindSection();
     }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;

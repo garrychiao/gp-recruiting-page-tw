@@ -1,26 +1,22 @@
 <template>
   <div class="fundraiser">
-    <el-row type="flex">
-      <el-col :xs="{span: 22, offset: 1}" :sm="{span: 22, offset: 1}">
+    <el-row class="graph-content">
+      <el-col>
         <h1>籌款幹事介紹</h1>
         <el-divider></el-divider>
       </el-col>
-    </el-row>
-
-    <el-row class="graph-content">
-      <el-col :span="22" :offset="1">
+      <el-col>
         <el-row v-for="(item, index) in collapseData" :key="index">
-          <el-col :span="24">
+          <el-col>
             <el-card shadow="hover">
-              <el-row :gutter="20">
+              <el-row>
                 <el-col
-                  :xs="{span: 22, offset: 1}"
                   :sm="{span: 16, offset: 0}"
                   class="hidden-sm-and-up"
                 >
                   <img :src="item.img" width="100%" alt />
                 </el-col>
-                <el-col :xs="{span: 22, offset: 1}" :sm="{span: 15, offset: 0}">
+                <el-col :sm="{span: 15, offset: 0}">
                   <h2>{{item.name}}</h2>
                   <p>
                     職位：{{item.position}}

@@ -6,7 +6,7 @@
           <h1>誠聘綠色和平籌款幹事．以實際行動推動積極改變</h1>
         </div>
       </el-col>
-      <el-col :sm="20">
+      <el-col>
         <el-carousel :interval="6000">
           <el-carousel-item v-for="(item, index) in carouselItems" :key="index">
             <img :src="item.imgUrl" width="100%" alt />
