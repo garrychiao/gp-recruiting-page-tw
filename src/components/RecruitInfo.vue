@@ -7,14 +7,16 @@
           有意應徵者，歡迎將履歷電郵至 david.lau@greenpeace.org 或 whatsapp 54603080 劉先生了解詳情。
           <br />(應徵者提供之全部資料絕對保密及只作招聘之用)
         </p>
+      </el-col>
+      <el-col>
         <img
           src="https://secured.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/recruit_mv.jpg"
           width="100%"
           alt
         />
+        <el-divider></el-divider>
       </el-col>
     </el-row>
-    <el-divider></el-divider>
     <el-row class="graph-content">
       <el-col :span="24">
         <h2>了解我們更多的工作使命，可觀看以下短片或瀏覧我們的網址</h2>
