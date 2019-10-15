@@ -20,7 +20,7 @@
                     </el-col>
                 </el-row>
             </el-col>
-            <el-col :xs="{span: 20, offset: 2}" :sm="{span: 20, offset: 2}" :xl="{span: 3, offset: 3}">
+            <el-col :xs="{span: 20, offset: 2}" :sm="{span: 20, offset: 2}" :md="{span: 3, offset: 3}" :xl="{span: 3, offset: 3}">
                 <div class="logo-container">
                     <img src="https://www.greenpeace.org/hongkong/wp-content/themes/planet4-child-theme-hongkong/static/images/logo_zh_gp_w footer.svg" width="100%" alt="">
                 </div>
@@ -31,7 +31,7 @@
                     </p>
                 </div>
             </el-col>
-            <el-col :xs="{span: 10, offset: 4}" :sm="{span: 10, offset: 4}" :xl="{span: 2, offset: 5}">
+            <el-col :xs="{span: 10, offset: 4}" :sm="{span: 10, offset: 4}" :md="{span: 2, offset: 5}" :xl="{span: 2, offset: 5}">
                 <h5>我們的工作</h5>
                 <ul>
 					<li><a href="https://www.greenpeace.org/hongkong/our-committment/all-projects/">環保項目</a></li>
@@ -64,16 +64,16 @@
     </div>
     <div class="footer-bot">
         <el-row>
-            <el-col :xs="{span: 22, offset: 1}" :sm="{span: 18, offset: 3}" :xl="{span: 15, offset: 3}">
+            <el-col :xs="{span: 22, offset: 1}" :sm="{span: 18, offset: 3}" :md="{span: 15, offset: 3}" :xl="{span: 15, offset: 3}">
                 <ul>
                     <li class="horizontal"><a class="green" href="https://www.greenpeace.org/hongkong/press-media/press-releases/">新聞中心</a></li>
                     <li class="horizontal"><a class="green" href="https://www.greenpeace.org/hongkong/my-preferences/">我的喜好</a></li>
                 </ul>
             </el-col>
-            <el-col :xs="{span: 22, offset: 1}" :sm="{span: 18, offset: 3}" :xl="{span: 15, offset: 3}">
+            <el-col :xs="{span: 22, offset: 1}" :sm="{span: 18, offset: 3}" :md="{span: 15, offset: 3}" :xl="{span: 15, offset: 3}">
                 <el-divider></el-divider>
             </el-col>
-            <el-col :xs="{span: 21, offset: 1}" :sm="{span: 18, offset: 3}" :xl="{span: 15, offset: 3}">
+            <el-col :xs="{span: 21, offset: 1}" :sm="{span: 18, offset: 3}" :md="{span: 15, offset: 3}" :xl="{span: 15, offset: 3}">
                 <ul>
                     <li class="horizontal small"><a href="https://www.greenpeace.org/hongkong/policies/privacy-and-cookies/"><small>私隱政策與個人資料收集聲明</small></a></li>
                     <li class="horizontal small"><a href="https://www.greenpeace.org/hongkong/policies/terms-and-conditions/"><small>版權</small></a></li>
