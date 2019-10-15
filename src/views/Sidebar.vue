@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <el-menu text-color="#000000" active-text-color="#fff" :default-active="active" class="el-menu">
+    <el-menu active-text-color="#fff" :default-active="active" class="el-menu">
       <el-menu-item
         v-for="(item, i) in routers"
         :class="item.class"

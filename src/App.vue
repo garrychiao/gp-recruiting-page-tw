@@ -16,7 +16,44 @@
         </el-row>
       </el-main>
       <!-- main -->
-      <app-footer></app-footer>
+      <el-footer class="footer" height="auto">
+        <!--
+        <div class="footer-top">
+          <el-row>
+            <el-col :md="12">
+              <img
+                src="https://www.greenpeace.org/hongkong/wp-content/themes/planet4-child-theme-hongkong/static/images/logo_zh_gp_w footer.svg"
+                width="100%"
+                style="max-width: 200px;"
+              />
+              <el-divider></el-divider>
+              <p>綠色和平是獨立的國際環保組織，通過科學研究、政策倡議及和平行動，揭露全球環境問題並提出相應解決方案。 我們從不接受任何政府、企業或政治團體的資助，只接受個人的直接捐款，以維持公正獨立。</p>
+            </el-col>
+            <el-col :md="12">
+              <ul>
+                <li>
+                  <a href="https://www.greenpeace.org/hongkong/about/overview/">簡介</a>
+                </li>
+                <li>
+                  <a href="https://www.greenpeace.org/hongkong/about/mission/">核心使命</a>
+                </li>
+                <li>
+                  <a href="https://www.greenpeace.org/hongkong/about/how-we-act/">行動理念</a>
+                </li>
+                <li>
+                  <a href="https://www.greenpeace.org/hongkong/about/contact/">聯絡我們</a>
+                </li>
+              </ul>
+            </el-col>
+          </el-row>
+        </div>
+        -->
+        <div class="footer-bot">
+          <el-row>
+            <p class="logo-box">© GREENPEACE 2019</p>
+          </el-row>
+        </div>
+      </el-footer>
       <!-- footer -->
       <el-button
         v-if="fixBtnVisible"
@@ -34,7 +71,6 @@
 import MainContent from "./views/MainContent.vue";
 import Navbar from "./views/Navbar.vue";
 import Sidebar from "./views/Sidebar.vue";
-import AppFooter from "./views/AppFooter.vue";
 
 export default {
   name: "app",
@@ -46,8 +82,7 @@ export default {
   components: {
     MainContent,
     Sidebar,
-    Navbar,
-    AppFooter
+    Navbar
   },
   created() {
     if (this.$route.params.section == "applyForm") {
@@ -89,7 +124,8 @@ export default {
   flex: 1;
 }
 .el-footer {
-  padding-top: 60px;
+  height: auto;
+  margin-top: 60px;
   background-color: #292f47;
   color: white;
 }

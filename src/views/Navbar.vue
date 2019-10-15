@@ -7,15 +7,14 @@
           alt="Greenpeace 綠色和平"
           class="navbar-logo"
         />
-        <el-button 
-          type="danger" 
-          class="apply-btn-navbar hidden-sm-and-down" 
-          size="mini" 
-          round 
-          plain 
-          @click="directTo('applyForm')"> 
-          立即申請
-        </el-button>
+        <el-button
+          type="danger"
+          class="apply-btn-navbar hidden-sm-and-down"
+          size="mini"
+          round
+          plain
+          @click="directTo('applyForm')"
+        >立即申請</el-button>
       </el-col>
       <el-col :span="4">
         <el-button

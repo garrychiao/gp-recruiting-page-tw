@@ -1,13 +1,13 @@
 <template>
   <div class="home">
     <el-row>
-      <el-col :xs="{span: 24, offset: 0}" :sm="{span: 8, offset: 0}">
+      <el-col>
         <div>
           <h1>誠聘綠色和平籌款幹事．以實際行動推動積極改變</h1>
         </div>
       </el-col>
-      <el-col :xs="{span: 24, offset: 0}" :sm="{span: 16, offset: 0}">
-        <el-carousel :interval="5000">
+      <el-col :sm="20">
+        <el-carousel :interval="6000">
           <el-carousel-item v-for="(item, index) in carouselItems" :key="index">
             <img :src="item.imgUrl" width="100%" alt />
           </el-carousel-item>

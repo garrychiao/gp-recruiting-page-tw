@@ -1,28 +1,27 @@
 <template>
   <div class="mission">
     <el-row>
-      <el-col :span="22" :offset="1">
+      <el-col>
         <h1>綠色和平的使命</h1>
         <p>我們是一個獨立的國際環保組織，致力以實際行動推動積極的改變，保護地球環境與世界和平。</p>
         <p>我們透過研究、教育、行動和游說工作，推動政府、企業和社會大眾共同尋求環境問題的解決方案。</p>
         <el-divider></el-divider>
         <h1>綠色和平的IDEAL</h1>
         <h2>綠色和平推動環保項目時 奉行「IDEAL」核心價值，配合不同行動策略，實踐環境理想。</h2>
-        <el-divider></el-divider>
         <div v-for="(item, index) in cardData" :key="index">
           <el-row>
             <el-col
               :xs="{span: 24, offset: 0}"
-              :sm="{span: 9, offset: 0}"
-              :xl="{span: 8, offset: 0}"
+              :sm="{span: 12, offset: 0}"
+              :xl="{span: 10, offset: 0}"
               class="hide-overflow"
             >
               <img :src="item.img" alt width="100%" />
             </el-col>
             <el-col
-              :xs="{span: 22, offset: 1}"
-              :sm="{span: 14, offset: 1}"
-              :xl="{span: 15, offset: 1}"
+              :xs="{span: 23, offset: 1}"
+              :sm="{span: 11, offset: 1}"
+              :xl="{span: 13, offset: 1}"
             >
               <h2>{{item.title}}</h2>
               <p>{{ item.content }}</p>
