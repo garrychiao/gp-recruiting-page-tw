@@ -18,7 +18,14 @@
       <!-- main -->
       <app-footer></app-footer>
       <!-- footer -->
-      <el-button v-if="fixBtnVisible" type="danger" icon="el-icon-edit" class="hidden-md-and-up fix-btn" circle @click="directTo('applyForm')"></el-button>
+      <el-button
+        v-if="fixBtnVisible"
+        type="danger"
+        icon="el-icon-edit"
+        class="hidden-md-and-up fix-btn"
+        circle
+        @click="directTo('applyForm')"
+      ></el-button>
     </el-container>
   </main>
 </template>
@@ -33,36 +40,36 @@ export default {
   name: "app",
   data() {
     return {
-      fixBtnVisible: true,
-    }
+      fixBtnVisible: true
+    };
   },
   components: {
     MainContent,
     Sidebar,
     Navbar,
-    AppFooter,
+    AppFooter
   },
   created() {
-    if (this.$route.params.section == 'applyForm') {
-      this.fixBtnVisible = false
+    if (this.$route.params.section == "applyForm") {
+      this.fixBtnVisible = false;
     } else {
-      this.fixBtnVisible = true
+      this.fixBtnVisible = true;
     }
   },
   methods: {
     directTo(link) {
       if (link !== this.$route.params.section) {
         this.$router.push({ path: link });
-      } 
+      }
       window.scrollTo(0, 0);
-    },
+    }
   },
   watch: {
     "$route.params.section": function() {
-      if (this.$route.params.section == 'applyForm') {
-        this.fixBtnVisible = false
+      if (this.$route.params.section == "applyForm") {
+        this.fixBtnVisible = false;
       } else {
-        this.fixBtnVisible = true
+        this.fixBtnVisible = true;
       }
     }
   }
@@ -89,7 +96,8 @@ export default {
 .fix-btn {
   z-index: 1200;
   position: fixed;
-  bottom: 110px;
-  right: 20px;
+  bottom: 16px;
+  right: 16px;
+  font-size: 2rem !important;
 }
 </style>
