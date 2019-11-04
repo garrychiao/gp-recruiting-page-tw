@@ -1,65 +1,57 @@
 <template>
   <div class="recruit-info">
-    <el-row :span="24">
-      <el-col>
-        <h1>人才招聘資訊</h1>
-        <p>
-          有意應徵者，歡迎將履歷電郵至 david.lau@greenpeace.org 或 whatsapp 54603080 劉先生了解詳情。
-          <br />(應徵者提供之全部資料絕對保密及只作招聘之用)
-        </p>
-      </el-col>
-      <el-col>
-        <img
-          src="https://secured.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/recruit_mv.jpg"
-          width="100%"
-          alt
-        />
-        <el-divider></el-divider>
-      </el-col>
-    </el-row>
-    <el-row class="graph-content">
-      <el-col :span="24">
-        <h2>了解我們更多的工作使命，可觀看以下短片或瀏覧我們的網址</h2>
-        <el-tabs type="border-card" :stretch="true">
-          <el-tab-pane>
-            <span slot="label">
-              <i class="el-icon-caret-right"></i> 影片 1
-            </span>
-            <iframe
-              class="video"
-              src="https://www.youtube.com/embed/sffAL_fzUnU?enablejsapi=1"
-              width="100%"
-              scrolling="no"
-              frameborder="0"
-            ></iframe>
-          </el-tab-pane>
-          <el-tab-pane>
-            <span slot="label">
-              <i class="el-icon-caret-right"></i> 影片 2
-            </span>
-            <iframe
-              class="video"
-              src="https://www.youtube.com/embed/hdfQbf6W2sc?enablejsapi=1"
-              width="100%"
-              scrolling="no"
-              frameborder="0"
-            ></iframe>
-          </el-tab-pane>
-          <el-tab-pane>
-            <span slot="label">
-              <i class="el-icon-caret-right"></i> 影片 3
-            </span>
-            <iframe
-              class="video"
-              src="https://www.youtube.com/embed/dm27NgZwJdA?enablejsapi=1"
-              width="100%"
-              scrolling="no"
-              frameborder="0"
-            ></iframe>
-          </el-tab-pane>
-        </el-tabs>
-      </el-col>
-    </el-row>
+    <h1>人才招聘資訊</h1>
+    <p>
+      有意應徵者，歡迎將履歷電郵至 david.lau@greenpeace.org 或 whatsapp 54603080 劉先生了解詳情。
+      <br />(應徵者提供之全部資料絕對保密及只作招聘之用)
+    </p>
+    <img
+      src="https://secured.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/recruit_mv.jpg"
+      width="100%"
+      alt
+    />
+    <el-divider></el-divider>
+    <div class="graph-content">
+      <h2>了解我們更多的工作使命，可觀看以下短片或瀏覧我們的網址</h2>
+      <el-tabs type="border-card" :stretch="true">
+        <el-tab-pane>
+          <span slot="label">
+            <i class="el-icon-caret-right"></i> 影片 1
+          </span>
+          <iframe
+            class="video"
+            src="https://www.youtube.com/embed/sffAL_fzUnU?enablejsapi=1"
+            width="100%"
+            scrolling="no"
+            frameborder="0"
+          ></iframe>
+        </el-tab-pane>
+        <el-tab-pane>
+          <span slot="label">
+            <i class="el-icon-caret-right"></i> 影片 2
+          </span>
+          <iframe
+            class="video"
+            src="https://www.youtube.com/embed/hdfQbf6W2sc?enablejsapi=1"
+            width="100%"
+            scrolling="no"
+            frameborder="0"
+          ></iframe>
+        </el-tab-pane>
+        <el-tab-pane>
+          <span slot="label">
+            <i class="el-icon-caret-right"></i> 影片 3
+          </span>
+          <iframe
+            class="video"
+            src="https://www.youtube.com/embed/dm27NgZwJdA?enablejsapi=1"
+            width="100%"
+            scrolling="no"
+            frameborder="0"
+          ></iframe>
+        </el-tab-pane>
+      </el-tabs>
+    </div>
   </div>
 </template>
 
