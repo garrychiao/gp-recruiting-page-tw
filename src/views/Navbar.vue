@@ -1,32 +1,27 @@
 <template>
   <div class="navbar">
     <el-row type="flex" justify="space-between" align="middle" style="height: 60px;">
-      <el-col :xs="{span: 17, offset: 1}" :sm="{span: 17, offset: 3}" :xl="{span: 14, offset: 3}">
+      <el-col :span="20">
         <img
           src="@/assets/img/GP-logo-2019-TC-white-[web]-01.png"
           alt="Greenpeace 綠色和平"
           class="navbar-logo"
         />
+      </el-col>
+      <el-col class="hidden-sm-and-down">
         <el-button
           type="danger"
-          class="apply-btn-navbar hidden-sm-and-down"
-          size="mini"
+          class="apply-btn-navbar"
           round
           plain
           @click="directTo('applyForm')"
         >立即申請</el-button>
       </el-col>
-      <el-col :span="4">
-        <el-button
-          size="small"
-          icon="el-icon-more"
-          plain
-          @click="drawer = !drawer"
-          class="hidden-md-and-up"
-        ></el-button>
+      <el-col class="hidden-md-and-up">
+        <el-button class="more-btn-navbar" icon="el-icon-menu" @click="drawer = !drawer"></el-button>
       </el-col>
     </el-row>
-    <el-drawer :visible.sync="drawer" custom-class="drawer" size="auto" direction="ltr">
+    <el-drawer :visible.sync="drawer" custom-class="drawer" direction="ltr" size="50%">
       <el-menu
         text-color="#000000"
         active-text-color="#fff"
@@ -158,6 +153,9 @@ export default {
     background-color: #f56c6c;
   }
   .apply-btn-navbar {
+    float: right;
+  }
+  .more-btn-navbar {
     float: right;
   }
 }

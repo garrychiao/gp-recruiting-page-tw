@@ -3,18 +3,14 @@
     <el-row>
       <el-col>
         <div>
-          <h1>誠聘綠色和平籌款幹事．以實際行動推動積極改變</h1>
+          <h1>誠聘綠色和平籌款幹事</h1>
+          <h2>以實際行動推動積極改變</h2>
         </div>
         <el-carousel :interval="6000">
           <el-carousel-item v-for="(item, index) in carouselItems" :key="index">
             <img :src="item.imgUrl" width="100%" alt />
           </el-carousel-item>
         </el-carousel>
-        <div class="hidden-sm-and-up">
-          <h1>誠聘綠色和平籌款幹事</h1>
-          <h2>綠色和平以實際行動推動積極改變</h2>
-          <el-divider></el-divider>
-        </div>
       </el-col>
     </el-row>
     <el-row>

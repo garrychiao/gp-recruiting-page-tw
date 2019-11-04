@@ -2,16 +2,20 @@
   <main id="app" class="main">
     <el-container>
       <el-header class="header">
-        <Navbar></Navbar>
+        <header class="header">
+          <div class="container">
+            <Navbar></Navbar>
+          </div>
+        </header>
       </el-header>
       <!-- header -->
       <el-main>
         <el-container>
-          <el-row :gutter="20" style="width: 100%;">
-            <el-col :span="24" :md="6" :xl="4" class="hidden-sm-and-down">
+          <el-row style="width: 100%;">
+            <el-col :md="6" class="hidden-sm-and-down">
               <Sidebar></Sidebar>
             </el-col>
-            <el-col :span="24" :md="18" :xl="20">
+            <el-col :md="17">
               <MainContent></MainContent>
             </el-col>
           </el-row>
@@ -20,11 +24,6 @@
       <!-- main -->
       <el-footer class="footer" height="auto">
         <AppFooter />
-        <div class="footer-bot">
-          <el-row>
-            <p class="logo-box">© GREENPEACE 2019</p>
-          </el-row>
-        </div>
       </el-footer>
       <!-- footer -->
       <el-button
@@ -94,11 +93,18 @@ export default {
     background-color: #6c0;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
     color: white;
+    .header {
+      .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
   .el-main {
     flex: 1;
     .el-container {
-      max-width: 1400px;
+      max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -107,7 +113,6 @@ export default {
     height: auto;
     margin-top: 60px;
     background-color: #292f47;
-    color: white;
   }
   .fix-btn {
     z-index: 1200;

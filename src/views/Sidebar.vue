@@ -99,6 +99,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .sidebar {
+  margin-right: 16px;
   .el-menu-item {
     display: flex;
     align-items: center;
