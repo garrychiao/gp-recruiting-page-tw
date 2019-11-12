@@ -8,7 +8,7 @@
 				</div>
 				<el-carousel :interval="5000" :height="vheight">
 					<el-carousel-item v-for="(item, index) in carouselItems" :key="index">
-						<img :src="item.imgUrl" width="100%" alt />
+						<img ref="imgHeight" :src="item.imgUrl" style="height: auto" width="100%" alt />
 					</el-carousel-item>
 				</el-carousel>
 			</el-col>
@@ -29,7 +29,7 @@ export default {
 	name: "Home",
 	data() {
 		return {
-			vheight: 600,
+			vheight: 'auto',
 			carouselItems: [
 				{
 					imgUrl:
@@ -51,7 +51,7 @@ export default {
 		};
 	},
 	beforeMount: function() {
-		this.vheight = window.innerWidth * 664 / 1920 + 'px';
+		this.vheight = window.innerWidth * 1080 / 1920 + 'px';
 	},
 };
 </script>
