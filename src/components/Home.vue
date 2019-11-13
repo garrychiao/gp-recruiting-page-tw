@@ -36,16 +36,16 @@ export default {
 					require('@/assets/img/7R307315.jpg')
 				},
 				{
-					imgUrl:
-					"https://secured.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/index_mv2_new.jpg"
+					imgUrl: require('@/assets/img/slide2.jpg')
 				},
 				{
-					imgUrl:
-					"https://secured.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/index_mv3_new.jpg"
+					imgUrl: require('@/assets/img/slide3.jpg')
 				},
 				{
-					imgUrl:
-					"https://secured-static.greenpeace.org/hk/Global/hk/artworks/gp/ddc-recruitment/2015/img/index_mv4.jpg"
+					imgUrl: require('@/assets/img/slide4.jpg')
+				},
+				{
+					imgUrl: require('@/assets/img/slide5.jpg')
 				}
 			]
 		};
