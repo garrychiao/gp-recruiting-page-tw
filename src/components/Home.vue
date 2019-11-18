@@ -6,11 +6,25 @@
 					<h1>誠聘綠色和平籌款幹事</h1>
 					<h2>以實際行動推動積極改變</h2>
 				</div>
-				<el-carousel :interval="5000" :height="vheight">
+				<!-- <el-carousel :interval="5000" :height="vheight">
 					<el-carousel-item v-for="(item, index) in carouselItems" :key="index">
 						<img ref="imgHeight" :src="item.imgUrl" style="height: auto" width="100%" alt />
 					</el-carousel-item>
-				</el-carousel>
+				</el-carousel> -->
+				<carousel 
+					:per-page="1" 
+					:adjustableHeight="true" 
+					:mouse-drag="true"
+					:autoplay="true"
+					:autoplayTimeout="5000"
+					:autoplayHoverPause="false"
+					:loop="true"
+					:paginationEnabled="false"
+					:speed="800">
+					<slide v-for="(item, index) in carouselItems" :key="index">
+						<img ref="imgHeight" :src="item.imgUrl" width="100%" />
+					</slide>
+				</carousel>
 			</el-col>
 		</el-row>
 		<el-row>
@@ -25,8 +39,14 @@
 </template>
 
 <script>
+import { Carousel, Slide } from 'vue-carousel';
+
 export default {
 	name: "Home",
+	components: {
+		Carousel,
+		Slide
+	},
 	data() {
 		return {
 			vheight: 'auto',
@@ -47,7 +67,7 @@ export default {
 				{
 					imgUrl: require('@/assets/img/slide5.jpg')
 				}
-			]
+			],
 		};
 	},
 	beforeMount: function() {
