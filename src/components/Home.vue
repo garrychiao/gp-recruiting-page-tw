@@ -6,27 +6,16 @@
 					<h1>誠聘綠色和平籌款幹事</h1>
 					<h2>以實際行動推動積極改變</h2>
 				</div>
-				<!-- <el-carousel :interval="5000" :height="vheight">
-					<el-carousel-item v-for="(item, index) in carouselItems" :key="index">
-						<img ref="imgHeight" :src="item.imgUrl" style="height: auto" width="100%" alt />
-					</el-carousel-item>
-				</el-carousel> -->
-				<carousel 
-					:per-page="1" 
-					:adjustableHeight="true" 
-					:mouse-drag="true"
-					:autoplay="true"
-					:autoplayTimeout="5000"
-					:autoplayHoverPause="false"
-					:loop="true"
-					:paginationEnabled="false"
-					:speed="800">
+				<carousel ref="carousel" :per-page="1" :adjustableHeight="true" :mouse-drag="true" :autoplay="true" :autoplayTimeout="5000" :loop="true" :navigationEnables="true" :paginationEnabled="false">
 					<slide v-for="(item, index) in carouselItems" :key="index">
-						<img ref="imgHeight" :src="item.imgUrl" width="100%" />
+						<img :src="item.imgUrl" width="100%" />
 					</slide>
 				</carousel>
 			</el-col>
 		</el-row>
+		<div>
+
+		</div>
 		<el-row>
 			<el-col>
 				<el-divider class="hidden-xs-only"></el-divider>
@@ -49,11 +38,10 @@ export default {
 	},
 	data() {
 		return {
-			vheight: 'auto',
 			carouselItems: [
 				{
 					imgUrl:
-					require('@/assets/img/7R307315.jpg')
+					require('@/assets/img/slide1.jpeg')
 				},
 				{
 					imgUrl: require('@/assets/img/slide2.jpg')
@@ -70,8 +58,19 @@ export default {
 			],
 		};
 	},
-	beforeMount: function() {
-		this.vheight = window.innerWidth * 1080 / 1920 + 'px';
-	},
+	mounted() {
+  setTimeout(() => {
+    this.$refs['carousel'].onResize();
+    this.$refs['carousel'].goToPage(0);
+  }, 200);
+}
 };
 </script>
+
+<style>
+.VueCarousel-slide {
+  visibility: visible;
+  flex-basis: 100%;
+  width: 100%;
+}
+</style>
