@@ -13,6 +13,13 @@
 			<el-col>
 				<el-card shadow="always">
 					<el-form :model="applyForm" :rules="rules" ref="applyForm" label-position="top" label-width="120px" class="demo-applyForm">
+						<el-form-item label="工作地點" prop="location">
+							<el-radio-group v-model="applyForm.location">
+								<el-radio label="臺北"></el-radio>
+								<el-radio label="臺中"></el-radio>
+								<el-radio label="高雄"></el-radio>
+							</el-radio-group>
+						</el-form-item>
 						<el-form-item label="性別" prop="gender">
 							<el-radio-group v-model="applyForm.gender">
 								<el-radio label="男"></el-radio>
@@ -57,7 +64,8 @@ export default {
 				phone: "",
 				email: "",
 				birthYear: "",
-				gender: "男"
+				gender: "男",
+				location: "臺北"
 			},
 			rules: {
 				name: [{ required: true, message: "請輸入中文全名", trigger: "blur" }],
