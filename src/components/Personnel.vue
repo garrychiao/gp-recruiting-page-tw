@@ -2,8 +2,8 @@
 	<div class="personnel">
 		<el-row>
 			<el-col>
-				<h1>人事制度</h1>
-				<p>我們將嚴謹注視每名員工的能力和工作表現，以加薪和晉升來獎勵每名員工的努力。</p>
+				<h1>升遷制度</h1>
+				<p>為求增進員工發展性及進步意識、維持架構穩定性，訂定多元並透明的升遷制度。透過公開的條件設定，讓員工明確了解目標，以利規劃自身職涯，朝設定目標邁進。</p>
 				<el-divider></el-divider>
 				<h2>晉升機會</h2>
 				<img src="../assets/img/2019_09_HK DD handbook_graphic-01.png" width="100%" alt />

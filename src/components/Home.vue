@@ -40,20 +40,19 @@ export default {
 		return {
 			carouselItems: [
 				{
-					imgUrl:
-					require('@/assets/img/slide1.jpeg')
+					imgUrl: require('@/assets/img/home-slide-1.jpg')
 				},
 				{
-					imgUrl: require('@/assets/img/slide2.jpg')
+					imgUrl: require('@/assets/img/home-slide-2.jpg')
 				},
 				{
-					imgUrl: require('@/assets/img/slide3.jpg')
+					imgUrl: require('@/assets/img/home-slide-3.jpg')
 				},
 				{
-					imgUrl: require('@/assets/img/slide4.jpg')
+					imgUrl: require('@/assets/img/home-slide-4.jpg')
 				},
 				{
-					imgUrl: require('@/assets/img/slide5.jpg')
+					imgUrl: require('@/assets/img/home-slide-5.jpg')
 				}
 			],
 		};

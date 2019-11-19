@@ -2,7 +2,7 @@
 	<div class="fundraiser">
 		<el-row class="graph-content">
 			<el-col>
-				<h1>籌款幹事介紹</h1>
+				<h1>認識專員</h1>
 			</el-col>
 
 			<el-col>

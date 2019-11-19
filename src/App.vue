@@ -59,7 +59,7 @@ export default {
 					class: "",
 					icon: "el-icon-user-solid",
 					link: "recruit",
-					label: "人才招聘資訊"
+					label: "職務資訊"
 				},
 				{
 					class: "",
@@ -71,7 +71,7 @@ export default {
 					class: "",
 					icon: "el-icon-s-check",
 					link: "fundraiser",
-					label: "認識籌款幹事"
+					label: "認識專員"
 				},
 				{
 					class: "",
