@@ -247,23 +247,6 @@ export default {
 	margin-bottom: 20px;
 }
 
-
-/*
-.video {
-  height: 600px;
-}
-@media (min-width: 992px) and (max-width: 1919px) {
-  .video {
-    height: 430px;
-  }
-}
-@media (max-width: 991px) {
-  .video {
-    height: 280px;
-  }
-}
-*/
-
 [style*="--aspect-ratio"]> :first-child {
 	width: 100%;
 }
