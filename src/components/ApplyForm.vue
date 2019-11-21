@@ -98,6 +98,7 @@ export default {
 					let year = d.getFullYear();
 
 					let data = new FormData();
+					data.append("Location", this.applyForm.location);
 					data.append("Chi_Name", this.applyForm.name);
 					data.append("Gender", this.applyForm.gender);
 					data.append("Phone", this.applyForm.phone);
@@ -106,6 +107,7 @@ export default {
 					data.append("Source", window.location.search);
 
 					try {
+						// console.log(config.script);
 						let postRef = await axios.post(config.script, data);
 
 						let res = postRef.data;
