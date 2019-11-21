@@ -22,10 +22,12 @@
         </el-container>
       </el-main>
       <!-- main -->
-      <el-footer class="footer" height="auto">
-        <el-container>
-          <AppFooter />
-        </el-container>
+      <el-footer height="auto">
+        <footer class="footer">
+          <div class="container">
+            <AppFooter />
+          </div>
+        </footer>
       </el-footer>
       <!-- footer -->
       <el-button
@@ -141,7 +143,7 @@ export default {
     color: white;
     .header {
       .container {
-        max-width: 1440px;
+        max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
       }
@@ -150,19 +152,20 @@ export default {
   .el-main {
     flex: 1;
     .el-container {
-      max-width: 1440px;
+      max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
     }
   }
-  .footer {
-    height: auto;
+  .el-footer {
     margin-top: 60px;
     background-color: #292f47;
+  }
+  .footer {
     font-size: 14px;
     padding: 2rem 0;
-    .el-container {
-      max-width: 1440px;
+    .container {
+      max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
     }
