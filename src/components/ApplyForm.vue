@@ -2,7 +2,7 @@
   <div class="personnel">
     <el-row>
       <el-col>
-        <h1>申請成為全職籌款幹事及街頭教育專員</h1>
+        <h1>申請成為全職募款與教育專員</h1>
       </el-col>
       <el-col>
         <img src="../assets/img/GP0STTIZR_Web_size.jpg" width="100%" alt />

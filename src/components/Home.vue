@@ -3,7 +3,7 @@
 		<el-row>
 			<el-col>
 				<div>
-					<h1>誠聘綠色和平籌款幹事</h1>
+					<h1>誠聘全職募款與教育專員</h1>
 					<h2>以實際行動推動積極改變</h2>
 				</div>
 				<carousel ref="carousel" :per-page="1" :adjustableHeight="true" :mouse-drag="true" :autoplay="true" :autoplayTimeout="5000" :loop="true" :navigationEnables="true" :paginationEnabled="false">
