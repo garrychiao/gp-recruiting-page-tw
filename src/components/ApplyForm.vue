@@ -77,6 +77,7 @@
 
 <script>
 import Swal from "sweetalert2";
+import dayjs from "dayjs";
 const axios = require("axios");
 const config = require("../config/config");
 
@@ -124,6 +125,7 @@ export default {
           let year = d.getFullYear();
 
           let data = new FormData();
+          data.append("Timestamp", dayjs().format('YYYY-MM-DD HH:mm:ss'));
           data.append("Location", this.applyForm.location);
           data.append("Chi_Name", this.applyForm.name);
           data.append("Gender", this.applyForm.gender);
