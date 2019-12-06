@@ -51,12 +51,18 @@
       >https://www.greenpeace.org/taiwan/</a
     >
     <!-- <el-divider></el-divider> -->
+    <center-btn></center-btn>
   </div>
 </template>
 
 <script>
+import CenterBtn from './CenterBtn';
+
 export default {
   name: "RecruitInfo",
+  components: {
+		CenterBtn,
+	},
   data() {
     return {
       activeName: "first"

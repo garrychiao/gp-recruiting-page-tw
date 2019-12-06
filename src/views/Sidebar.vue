@@ -62,7 +62,7 @@ export default {
 		font-size: 16px;
 	}
 	.apply-btn {
-		background-color: #f56c6c;
+		background-color: #ff8100;
 		color: #fff;
 		font-weight: bold;
 		i {
@@ -75,7 +75,7 @@ export default {
 		}
 		color: white !important;
 		font-weight: bolder;
-		background-color: #f56c6c;
+		background-color: #ff8100;
 	}
 }
 </style>

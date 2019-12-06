@@ -78,7 +78,7 @@ export default {
 		font-size: 16px;
 	}
 	.apply-btn {
-		background-color: #f56c6c;
+		background-color: #ff8100;
 		color: #fff;
 		font-weight: bold;
 		i {
@@ -91,10 +91,13 @@ export default {
 		}
 		color: white !important;
 		font-weight: bolder;
-		background-color: #f56c6c;
+		background-color: #ff8100;
 	}
 	.apply-btn-navbar {
 		float: right;
+		color: #fff;
+		background: #ff8100;
+		border-color: #ff8100;
 	}
 	.more-btn-navbar {
 		float: right;

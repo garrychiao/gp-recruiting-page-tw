@@ -104,12 +104,18 @@
         </el-col>
       </el-col>
     </el-row>
+    <center-btn></center-btn>
   </div>
 </template>
 
 <script>
+import CenterBtn from './CenterBtn';
+
 export default {
   name: "Mission",
+  components: {
+		CenterBtn,
+	},
   data() {
     return {
       collapseData: [
