@@ -111,6 +111,7 @@ export default {
     } else {
       this.fixBtnVisible = true;
     }
+    this.triggerGoogleEvent();
   },
   methods: {
     directTo(link) {
@@ -118,6 +119,10 @@ export default {
         this.$router.push({ path: link });
       }
       window.scrollTo(0, 0);
+    },
+    triggerGoogleEvent () {
+      dataLayer.push({ event: "pageview" });
+      console.log('dataLayer pushed !');
     }
   },
   watch: {
@@ -127,6 +132,7 @@ export default {
       } else {
         this.fixBtnVisible = true;
       }
+      this.triggerGoogleEvent();
     }
   }
 };

@@ -31,8 +31,10 @@ export default {
     padding-top: 20px;
 }
 .center-btn {
-    background-color: #ff8100;
-    color: white;
-    width: 100%;
+  border-radius: 20px !important;
+  font-size: 1rem !important;
+  background-color: #ff8100 !important;
+  color: white !important;
+  width: 100% !important;
 }
 </style>
