@@ -21,6 +21,7 @@
           </el-row>
         </el-container>
       </el-main>
+      <FooterNav :routers="routers" />
       <!-- main -->
       <el-footer height="auto">
         <footer class="footer">
@@ -47,6 +48,7 @@ import MainContent from "./views/MainContent.vue";
 import Navbar from "./views/Navbar.vue";
 import Sidebar from "./views/Sidebar.vue";
 import AppFooter from "./views/AppFooter.vue";
+import FooterNav from "./views/FooterNav.vue";
 
 export default {
   name: "app",
@@ -103,7 +105,8 @@ export default {
     MainContent,
     Sidebar,
     Navbar,
-    AppFooter
+    AppFooter,
+    FooterNav
   },
   created() {
     if (this.$route.params.section == "applyForm") {

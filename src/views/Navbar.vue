@@ -8,7 +8,7 @@
 				<el-button type="danger" class="apply-btn-navbar" round plain @click="directTo('applyForm')">立即申請</el-button>
 			</el-col>
 			<el-col class="hidden-md-and-up">
-				<el-button class="more-btn-navbar" icon="el-icon-menu" @click="drawer = !drawer"></el-button>
+				<el-button class="more-btn-navbar" :icon="(drawer ? 'el-icon-s-fold' : 'el-icon-s-unfold')" @click="drawer = !drawer"></el-button>
 			</el-col>
 		</el-row>
 		<el-drawer :visible.sync="drawer" custom-class="drawer" direction="ltr" size="50%">
