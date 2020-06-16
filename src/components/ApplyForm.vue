@@ -168,8 +168,8 @@ export default {
     async sendEmail(location, name, gender, phone, email, birthYear) {
       try {
 
-        const emailKey = `https://cors-anywhere.small-service.gpeastasia.org/https://us-central1-peppy-house-279114.cloudfunctions.net/mailer-test-1`;
-        // const emailKey = `https://us-central1-peppy-house-279114.cloudfunctions.net/mailer-test-1`;
+        // const emailKey = `https://cors-anywhere.small-service.gpeastasia.org/https://us-central1-peppy-house-279114.cloudfunctions.net/mailer-test-1`;
+        const emailKey = `https://us-central1-peppy-house-279114.cloudfunctions.net/mailer-test-1`;
 
         const to = [
           "g50905g@gmail.com",
