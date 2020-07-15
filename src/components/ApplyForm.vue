@@ -168,23 +168,14 @@ export default {
     async sendEmail(location, name, gender, phone, email, birthYear) {
       try {
 
-        // const emailKey = `https://cors-anywhere.small-service.gpeastasia.org/https://us-central1-peppy-house-279114.cloudfunctions.net/mailer-test-1`;
-        const emailKey = `https://us-central1-peppy-house-279114.cloudfunctions.net/mailer-test-1`;
+        const emailKey = `https://cors-anywhere.small-service.gpeastasia.org/https://us-central1-peppy-house-279114.cloudfunctions.net/mail-test2`;
+        // const emailKey = `https://us-central1-peppy-house-279114.cloudfunctions.net/mail-test2`;
 
-        const to = [
-          "g50905g@gmail.com",
-          "eggrollick@gmail.com"
-        ]
         const subject = `${location} - ${name} 申請成為全職募款與教育專員`;
-        let message = `工作地點：${location}<br>
-          中文全名：${name}<br>
-          聯絡電話：${phone}<br>
-          電郵地址：${email}<br>
-          性別：${gender}<br>
-          出生年份：${birthYear}`
+        let message = `工作地點：${location}\n中文全名：${name}\n聯絡電話：${phone}\n電郵地址：${email}\n性別：${gender}\n出生年份：${birthYear}`
 
         let data = {
-          to,
+          location,
           subject,
           message
         }
@@ -193,6 +184,7 @@ export default {
         console.log(res.data);
 
       } catch (err) {
+        throw err
         console.log(err);
       }
     },
