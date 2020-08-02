@@ -24,10 +24,10 @@
         <el-card>
           <h4>臺中辦公室</h4>
           <p>
-            周一寧先生<br />
-            04-23766608<br />
-            <a href="mailto:jchou@greenpeace.org" target="_blank"
-              >jchou@greenpeace.org</a
+            廖建閎先生<br />
+            0910-857-515<br />
+            <a href="mailto:chien.hung.liao@greenpeace.org" target="_blank"
+              >chien.hung.liao@greenpeace.org </a
             >
           </p>
         </el-card>
