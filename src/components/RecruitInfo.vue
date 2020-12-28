@@ -13,7 +13,7 @@
           <h4>臺北辦公室</h4>
           <p>
             薛紹芸小姐<br />
-            02-23612351#213<br />
+            02-23612351 #213<br />
             <a href="mailto:shau.yun.hsueh@greenpeace.org" target="_blank"
               >shau.yun.hsueh@greenpeace.org</a
             >
@@ -24,10 +24,10 @@
         <el-card>
           <h4>臺中辦公室</h4>
           <p>
-            廖建閎先生<br />
-            0910-857-515<br />
-            <a href="mailto:chien.hung.liao@greenpeace.org" target="_blank"
-              >chien.hung.liao@greenpeace.org </a
+            張湘妮小姐<br />
+            04-23766608 #407<br />
+            <a href="mailto:schang@greenpeace.org" target="_blank"
+              >schang@greenpeace.org </a
             >
           </p>
         </el-card>
@@ -36,10 +36,10 @@
         <el-card>
           <h4>高雄辦公室</h4>
           <p>
-            張湘妮小姐<br />
-            07-3127588#703<br />
-            <a href="mailto:schang@greenpeace.org" target="_blank"
-              >schang@greenpeace.org</a
+            陳瑩瑄小姐<br />
+            07-3127588 #704<br />
+            <a href="mailto:yinchen@greenpeace.org" target="_blank"
+              >yinchen@greenpeace.org</a
             >
           </p>
         </el-card>

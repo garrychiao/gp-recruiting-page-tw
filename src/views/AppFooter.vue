@@ -15,14 +15,14 @@
       <div class="footer__links">
         <ul>
           <li>
-            <a href="http://www.greenpeace.org/hk/">首頁</a>
+            <a href="https://www.greenpeace.org/taiwan/?ref=dd_recruitment">首頁</a>
           </li>
           <li>
-            <a href="https://act.greenpeace.org/page/4663/donate/1">捐助支持</a>
+            <a href="https://supporter.ea.greenpeace.org/tw/s/donate?ref=dd_recruitment">捐助支持</a>
           </li>
           <li>
             <a
-              href="http://www.greenpeace.org/hk/about/privacy/"
+              href="https://www.greenpeace.org/taiwan/policies/privacy-and-cookies/?ref=dd_recruitment"
               title="私隱政策與個人資料收集聲明"
             >私隱政策與個人資料收集聲明</a>
           </li>
