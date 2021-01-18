@@ -37,7 +37,7 @@
           <h4>高雄辦公室</h4>
           <p>
             陳瑩瑄小姐<br />
-            07-3127588 #704<br />
+            07-3800183 #704<br />
             <a href="mailto:yinchen@greenpeace.org" target="_blank"
               >yinchen@greenpeace.org</a
             >
